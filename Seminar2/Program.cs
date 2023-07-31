@@ -1,6 +1,17 @@
 ﻿//Теория по семинару 2
 /*
+int CutNumber(int num)
+{
+    int handreds = num / 100;
+    int units = num % 10;
 
+    return handreds * 10 + units;
+}
+
+int randNumber = new Random().Next(100, 1000);
+
+Console.WriteLine(CutNumber(randNumber));
+Console.Write("Вначале было число " + randNumber);
 */
 //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
 //на выходе показывает вторую цифру этого числа.
