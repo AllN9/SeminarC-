@@ -14,7 +14,7 @@ Console.WriteLine(CutNumber(randNumber));
 Console.Write("Вначале было число " + randNumber);
 */
 //Используемые функции
-
+/*
 int Greeting(int nomberOfTask)
 {
 
@@ -26,10 +26,10 @@ int Greeting(int nomberOfTask)
     Console.WriteLine("you entered a number " + requestedNumber);
     return requestedNumber;
 }
-
+*/
 //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
 //на выходе показывает вторую цифру этого числа.
-
+/*
 int number1 = Greeting(1);
 
 while(number1 < 100 || number1 > 999)
@@ -41,9 +41,9 @@ while(number1 < 100 || number1 > 999)
 
 int second = ((number1 / 10) % 10);
 Console.WriteLine("The second digit was: " + second);
-
+*/
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа ( или -1, если третьей цифры нет).
-
+/*
 int number2 = Greeting(2);
 
 if(number2 < 100)
@@ -60,10 +60,10 @@ else
     int third = (number2 % 10);
     Console.WriteLine("The third digit was: " + third);
 }
-
+*/
 //Задача 15: Напишите программу, которая принимает на вход цифру, 
 //обозначающую день недели, и проверяет, является ли этот день выходным.
-
+/*
 string[] daysOfWeek = { "Sunday", "Monday", "Tuersday", "Wednesday", "Thirsday", "Friday", "Saturday" };
 
 int number3 = Greeting(3);
@@ -83,3 +83,4 @@ else
 {
     Console.WriteLine($"your day of the week is {daysOfWeek[number3 - 1] } and it's not a weekend");
 }
+*/
