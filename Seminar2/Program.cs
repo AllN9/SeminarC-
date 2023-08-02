@@ -95,7 +95,7 @@ else
 }
 */
 //Реализация выбора желаемой задачи
-
+/*
 int Greeting()
 {
     Console.Write("Enter the number of the desired task or enter 0 to finish the program: ");
@@ -191,3 +191,4 @@ while(numberOfTask != 0)
 }
 
 Console.WriteLine("Bye-Bye!");
+*/
