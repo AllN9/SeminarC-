@@ -13,63 +13,73 @@ int randNumber = new Random().Next(100, 1000);
 Console.WriteLine(CutNumber(randNumber));
 Console.Write("Вначале было число " + randNumber);
 */
+//Используемые функции
+
+int Greeting(int nomberOfTask)
+{
+
+    if (nomberOfTask == 1)
+        Console.Write("Hellow!\nInput your three-digit number: ");
+    else
+        Console.Write("Hellow!\nInput your number: ");
+    int requestedNumber = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("you entered a number " + requestedNumber);
+    return requestedNumber;
+}
+
 //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
 //на выходе показывает вторую цифру этого числа.
-/*
-Console.Write("Input your three-digit number: ");
-int number = Convert.ToInt32(Console.ReadLine());
 
-while(number < 100 || number > 999)
+int number1 = Greeting(1);
+
+while(number1 < 100 || number1 > 999)
 {
     Console.WriteLine("You entered an incorrect number");
     Console.Write("Input your correct three-digit number: ");
-    number = Convert.ToInt32(Console.ReadLine());
+    number1 = Convert.ToInt32(Console.ReadLine());
 }
 
-int second = ((number / 10) % 10);
-Console.Write("The second digit was: " + second);
-*/
-//Задача 13: Напишите программу, которая выводит третью цифру заданного числа ( или -1, если третьей цифры нет).
-/*
-Console.Write("Input your number: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int second = ((number1 / 10) % 10);
+Console.WriteLine("The second digit was: " + second);
 
-if(number < 100)
+//Задача 13: Напишите программу, которая выводит третью цифру заданного числа ( или -1, если третьей цифры нет).
+
+int number2 = Greeting(2);
+
+if(number2 < 100)
 {
     Console.WriteLine("you entered a two-digit number");
     Console.WriteLine("The third digit was: -1");
 }
 else
 {
-    while(number > 999)
+    while(number2 > 999)
     {
-        number = number / 10;
+        number2 = number2 / 10;
     }
-    int third = (number % 10);
-    Console.Write("The third digit was: " + third);
+    int third = (number2 % 10);
+    Console.WriteLine("The third digit was: " + third);
 }
-*/
+
 //Задача 15: Напишите программу, которая принимает на вход цифру, 
 //обозначающую день недели, и проверяет, является ли этот день выходным.
-/*
+
 string[] daysOfWeek = { "Sunday", "Monday", "Tuersday", "Wednesday", "Thirsday", "Friday", "Saturday" };
 
-Console.Write("Input your number: ");
-int number = Convert.ToInt32(Console.ReadLine());
+int number3 = Greeting(3);
 
-while(number > 7 || number < 1)
+while(number3 > 7 || number3 < 1)
 {
     Console.WriteLine("Your number is not the day of the week");
     Console.Write("Input a number from 1 to 7: ");
-    number = Convert.ToInt32(Console.ReadLine());
+    number3 = Convert.ToInt32(Console.ReadLine());
 }
 
-if(number == 6 || number == 7)
+if(number3 == 6 || number3 == 7)
 {
-    Console.WriteLine($"your day of the week is {daysOfWeek[number - 1] } and it's a weekend");
+    Console.WriteLine($"your day of the week is {daysOfWeek[number3 - 1] } and it's a weekend");
 }
 else
 {
-    Console.WriteLine($"your day of the week is {daysOfWeek[number - 1] } and it's not a weekend");
+    Console.WriteLine($"your day of the week is {daysOfWeek[number3 - 1] } and it's not a weekend");
 }
-*/
