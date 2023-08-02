@@ -14,7 +14,7 @@ Console.WriteLine(CutNumber(randNumber));
 Console.Write("Вначале было число " + randNumber);
 */
 //Используемые функции
-/*
+
 int RequestТumber(int nomberOfTask)
 {
 
@@ -23,64 +23,73 @@ int RequestТumber(int nomberOfTask)
     else
         Console.Write("Hellow!\nInput your number: ");
     int requestedNumber = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("you entered a number " + requestedNumber);
+    Console.WriteLine("You entered a number " + requestedNumber);
     return requestedNumber;
 }
-*/
+int ErrorChecking(int nomberOfTask, int requestedNumber)
+{
+    int correctRequestedNumber = requestedNumber;
+    if (nomberOfTask == 1)
+        while(correctRequestedNumber < 100 || correctRequestedNumber > 999)
+        {
+            Console.WriteLine("You entered an incorrect number");
+            Console.Write("Input your correct three-digit number: ");
+            correctRequestedNumber = Convert.ToInt32(Console.ReadLine());
+        }
+        else
+            if(nomberOfTask == 2)
+            {
+                if(correctRequestedNumber < 100)
+                    Console.WriteLine("you entered a two-digit number\nThe third digit was: -1");
+                return correctRequestedNumber;
+            }
+            else
+                while(correctRequestedNumber > 7 || correctRequestedNumber < 1)
+                {
+                    Console.WriteLine("Your number is not the day of the week");
+                    Console.Write("Input a number from 1 to 7: ");
+                    correctRequestedNumber = Convert.ToInt32(Console.ReadLine());
+                }
+    return correctRequestedNumber;
+}
+
 //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
 //на выходе показывает вторую цифру этого числа.
-/*
+
 int number1 = RequestТumber(1);
 
-while(number1 < 100 || number1 > 999)
-{
-    Console.WriteLine("You entered an incorrect number");
-    Console.Write("Input your correct three-digit number: ");
-    number1 = Convert.ToInt32(Console.ReadLine());
-}
+int correctNumber1 = ErrorChecking(1, number1);
 
-int second = ((number1 / 10) % 10);
-Console.WriteLine("The second digit was: " + second);
-*/
+correctNumber1 = ((correctNumber1 / 10) % 10);
+Console.WriteLine("The second digit was: " + correctNumber1);
+
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа ( или -1, если третьей цифры нет).
-/*
+
 int number2 = RequestТumber(2);
 
-if(number2 < 100)
+int correctNumber2 = ErrorChecking(2, number2);
+
+while(correctNumber2 > 999)
 {
-    Console.WriteLine("you entered a two-digit number");
-    Console.WriteLine("The third digit was: -1");
+    correctNumber2 = correctNumber2 / 10;
 }
-else
-{
-    while(number2 > 999)
-    {
-        number2 = number2 / 10;
-    }
-    int third = (number2 % 10);
-    Console.WriteLine("The third digit was: " + third);
-}
-*/
+int third = (correctNumber2 % 10);
+Console.WriteLine("The third digit was: " + correctNumber2 % 10);
+
 //Задача 15: Напишите программу, которая принимает на вход цифру, 
 //обозначающую день недели, и проверяет, является ли этот день выходным.
-/*
+
 string[] daysOfWeek = { "Sunday", "Monday", "Tuersday", "Wednesday", "Thirsday", "Friday", "Saturday" };
 
 int number3 = RequestТumber(3);
 
-while(number3 > 7 || number3 < 1)
-{
-    Console.WriteLine("Your number is not the day of the week");
-    Console.Write("Input a number from 1 to 7: ");
-    number3 = Convert.ToInt32(Console.ReadLine());
-}
+int correctNumber3 = ErrorChecking(3, number3);
 
-if(number3 == 6 || number3 == 7)
+if(correctNumber3 == 6 || correctNumber3 == 7)
 {
-    Console.WriteLine($"your day of the week is {daysOfWeek[number3 - 1] } and it's a weekend");
+    Console.WriteLine($"your day of the week is {daysOfWeek[correctNumber3 - 1] } and it's a weekend");
 }
 else
 {
-    Console.WriteLine($"your day of the week is {daysOfWeek[number3 - 1] } and it's not a weekend");
+    Console.WriteLine($"your day of the week is {daysOfWeek[correctNumber3 - 1] } and it's not a weekend");
 }
-*/
