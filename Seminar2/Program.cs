@@ -15,7 +15,7 @@ Console.Write("Вначале было число " + randNumber);
 */
 //Используемые функции
 /*
-int Greeting(int nomberOfTask)
+int RequestТumber(int nomberOfTask)
 {
 
     if (nomberOfTask == 1)
@@ -30,7 +30,7 @@ int Greeting(int nomberOfTask)
 //Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
 //на выходе показывает вторую цифру этого числа.
 /*
-int number1 = Greeting(1);
+int number1 = RequestТumber(1);
 
 while(number1 < 100 || number1 > 999)
 {
@@ -44,7 +44,7 @@ Console.WriteLine("The second digit was: " + second);
 */
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа ( или -1, если третьей цифры нет).
 /*
-int number2 = Greeting(2);
+int number2 = RequestТumber(2);
 
 if(number2 < 100)
 {
@@ -66,7 +66,7 @@ else
 /*
 string[] daysOfWeek = { "Sunday", "Monday", "Tuersday", "Wednesday", "Thirsday", "Friday", "Saturday" };
 
-int number3 = Greeting(3);
+int number3 = RequestТumber(3);
 
 while(number3 > 7 || number3 < 1)
 {
