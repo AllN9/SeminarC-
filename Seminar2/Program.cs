@@ -70,9 +70,7 @@ int number2 = RequestТumber(2);
 int correctNumber2 = ErrorChecking(2, number2);
 
 while(correctNumber2 > 999)
-{
     correctNumber2 = correctNumber2 / 10;
-}
 int third = (correctNumber2 % 10);
 Console.WriteLine("The third digit was: " + third);
 */
@@ -86,13 +84,9 @@ int number3 = RequestТumber(3);
 int correctNumber3 = ErrorChecking(3, number3);
 
 if(correctNumber3 == 6 || correctNumber3 == 7)
-{
     Console.WriteLine($"your day of the week is {daysOfWeek[correctNumber3 - 1] } and it's a weekend");
-}
 else
-{
     Console.WriteLine($"your day of the week is {daysOfWeek[correctNumber3 - 1] } and it's not a weekend");
-}
 */
 //Реализация выбора желаемой задачи
 /*
@@ -158,9 +152,7 @@ void TaskSolution(int numberOfTask, int correctRequestedNumber)
         if(numberOfTask == 13)
         {
             while(correctRequestedNumber > 999)
-            {
                 correctRequestedNumber = correctRequestedNumber / 10;
-            }
             int third = (correctRequestedNumber % 10);
             Console.WriteLine("The third digit was: " + third);
         }
@@ -168,13 +160,9 @@ void TaskSolution(int numberOfTask, int correctRequestedNumber)
         {
             string[] daysOfWeek = { "Sunday", "Monday", "Tuersday", "Wednesday", "Thirsday", "Friday", "Saturday" };
             if(correctRequestedNumber == 6 || correctRequestedNumber == 7)
-            {
                 Console.WriteLine($"your day of the week is {daysOfWeek[correctRequestedNumber - 1] } and it's a weekend");
-            }
             else
-            {
                 Console.WriteLine($"your day of the week is {daysOfWeek[correctRequestedNumber - 1] } and it's not a weekend");
-            }
         }
     }
 }
