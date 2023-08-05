@@ -3,9 +3,13 @@
 
 */
 //Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-
-
-
+/*
+Console.Write("Введите ваше число и степень, в которую вы хотите возвести это число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int degree = Convert.ToInt32(Console.ReadLine());
+double res = Math.Pow(num, degree);
+Console.Write(res);
+*/
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 /*
 Console.Write("Введите ваше число: ");
