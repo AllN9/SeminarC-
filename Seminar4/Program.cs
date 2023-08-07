@@ -92,3 +92,6 @@ int operation = Convert.ToInt32(Console.ReadLine());
 int [] mas = fillingTheArray(length, operation);
 outputRes(mas, operation, length);
 */
+//Реализация выбора желаемой задачи
+
+
