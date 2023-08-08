@@ -10,6 +10,41 @@ int Greeting()
     int size = Convert.ToInt32(Console.ReadLine());
     return size;
 }
+*/
+//Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
+//Напишите программу, которая покажет количество чётных чисел в массиве.
+/*
+int [] FillingTDNumArray(int size)
+{
+    int [] array = new int [size];
+    for(int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(100, 1000);
+    }
+    Console.Write("Полученный массив: [" + array[0]);
+    for(int i = 1; i < size; i++)
+    {
+        Console.Write(", " + array[i]);
+    }
+    Console.WriteLine("]");
+    return array;
+}
+
+int size = Greeting();
+int [] array = FillingTDNumArray(size);
+
+int res = 0;
+for(int i = 0; i < size; i++)
+{
+    if(array[i] % 2 == 0)
+        res ++;
+}
+
+Console.WriteLine("Количество четных чисел равно " + res);
+*/
+//Задача 36: Задайте одномерный массив, заполненный случайными числами.
+//Найдите сумму элементов, стоящих на нечётных позициях.
+/*
 int [] FillingArray(int size)
 {
     int [] array = new int [size];
@@ -28,25 +63,7 @@ int [] FillingArray(int size)
     Console.WriteLine("]");
     return array;
 }
-*/
-//Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
-//Напишите программу, которая покажет количество чётных чисел в массиве.
-/*
-int size = Greeting();
-int [] array = FillingArray(size);
 
-int res = 0;
-for(int i = 0; i < size; i++)
-{
-    if(array[i] % 2 == 0)
-        res ++;
-}
-
-Console.WriteLine("Количество четных чисел равно " + res);
-*/
-//Задача 36: Задайте одномерный массив, заполненный случайными числами.
-//Найдите сумму элементов, стоящих на нечётных позициях.
-/*
 int size = Greeting();
 int [] array = FillingArray(size);
 
@@ -136,6 +153,15 @@ double [] FillingArrayDouble(int size)
     }
     return array;
 }
+double [] FillingTDNumArray(int size)
+{
+    double [] array = new double [size];
+    for(int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(100, 1000);
+    }
+    return array;
+}
 void OutputMas(double [] array, int size)
 {
     Console.Write("Полученный массив: [" + array[0]);
@@ -193,14 +219,15 @@ while(numberOfTask != 0)
     }
     else
     {
-        double [] array = FillingArray(size);
         if(numberOfTask == 34)
         {
+            double [] array = FillingTDNumArray(size);
             OutputMas(array, size);
             QuantitySearchEven(array, size);
         }
         else
         {
+            double [] array = FillingArray(size);
             OutputMas(array, size);
             SearchSumNEvenEl(array, size);
         }
