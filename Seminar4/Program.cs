@@ -4,21 +4,21 @@
 */
 //Используемые функции
 /*
-int RequestNumber(string message)
+int RequestNumber(string message)//Функция приветственного сообщения и запроса числа
 {
     Console.Write(message);
     int number = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Вы ввели число: " + number);
+    Console.WriteLine("Вы ввели число: " + number);//Вывод введенного числа для проверки пользователем
     return number;
 }
 */
 //Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 /*
-void ConstructionCycle(int baseNum, int degree)
+void ConstructionCycle(int baseNum, int degree)//Функция визуализации работы программы
 {
     int current = baseNum;
     Console.WriteLine($"Ход работы программы по возведению числа {baseNum} в степень {degree}: ");
-    for(int i = 0; i < degree; i++)
+    for(int i = 0; i < degree; i++)//Цыкл возведения числа А в степень В
     {
         Console.Write(current + " ");
         current = current * baseNum;
@@ -26,10 +26,10 @@ void ConstructionCycle(int baseNum, int degree)
     Console.WriteLine("");
 }
 
-int baseNum = RequestNumber("Введите ваше число: ");
-int degree = RequestNumber("Введите степень, в которую вы хотите возвести это число: ");
+int baseNum = RequestNumber("Введите ваше число: ");//Запрос числа А
+int degree = RequestNumber("Введите степень, в которую вы хотите возвести это число: ");//Запрос степени В
 ConstructionCycle(baseNum, degree);
-Console.WriteLine($"Число {baseNum} в степени {degree} равно {Math.Pow(baseNum, degree)}");
+Console.WriteLine($"Число {baseNum} в степени {degree} равно {Math.Pow(baseNum, degree)}");//Контрольный вывод числа А в степени В
 */
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 /*
