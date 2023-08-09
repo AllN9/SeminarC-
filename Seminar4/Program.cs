@@ -33,10 +33,10 @@ Console.WriteLine($"Число {baseNum} в степени {degree} равно {
 */
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 /*
-int SearchSum(int num)
+int SearchSum(int num)//Функция поиска суммы цыфр числа
 {
     int sum = 0, current = num;
-    while(current != 0)
+    while(current != 0)//Цыкл суммирования
     {
         sum = sum + current % 10;
         current = current / 10;
@@ -44,36 +44,36 @@ int SearchSum(int num)
     return sum;
 }
 
-int num = RequestNumber("Введите ваше число: ");
-int res = SearchSum(num);
+int num = RequestNumber("Введите ваше число: ");//Запрос числа
+int res = SearchSum(num);//Поиск суммы цифр
 Console.WriteLine("Сумма цифр вашего числа равно: " + res);
 */
 //Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 /*
-int [] FillingTheArray(int length, int operation)
+int [] FillingTheArray(int length, int operation)//Функция заполнения массива
 {
     int [] array = new int[length];
-    if(operation == 0)
+    if(operation == 0)//Заполнение массива самостоятельно
     {
         Console.Write("Задайте массив: ");
-        for(int i = 0; i < length; i++)
+        for(int i = 0; i < length; i++)//Цикл запрос данных в массив
         {
             array[i] = Convert.ToInt32(Console.ReadLine());
         }
     }
     else
     {
-        Console.Write("Задайте нижний и верхний предел, в котором будут выбираться случайные числа: ");
+        Console.Write("Задайте нижний и верхний предел, в котором будут выбираться случайные числа: ");//Запрос пределов заполнения случайными числами
         int min = Convert.ToInt32(Console.ReadLine());
         int max = Convert.ToInt32(Console.ReadLine());
-        for(int i = 0; i < length; i++)
+        for(int i = 0; i < length; i++)//Цикл заполнения массива случайными числами в заданном диапазоне
         {
             array[i] = new Random().Next(min, max + 1);
         }
     }
     return array;
 }
-void OutputRes(int [] mas, int operation, int length)
+void OutputRes(int [] mas, int operation, int length)//Функция вывода результата заполнения массива для проверки пользователем
 {
     if(operation == 1)
         Console.Write("Полученный массив из случайных чисел: [");
@@ -86,11 +86,11 @@ void OutputRes(int [] mas, int operation, int length)
     Console.Write(mas[length - 1] + "]");
 }
 
-int length = RequestNumber("Введите размер массива: ");
+int length = RequestNumber("Введите размер массива: ");//Запрос размера массива
 Console.Write("Введите 1, чтобы заполнить массив случайыми числами, или 0, чтобы заполнить его самостоятельно: ");
-int operation = Convert.ToInt32(Console.ReadLine());
-int [] mas = FillingTheArray(length, operation);
-OutputRes(mas, operation, length);
+int operation = Convert.ToInt32(Console.ReadLine());//Определение условия заполнения
+int [] mas = FillingTheArray(length, operation);//Заполнение массива согласно условию
+OutputRes(mas, operation, length);//Вывод результата
 */
 //Реализация выбора желаемой задачи
 /*
@@ -195,24 +195,24 @@ void OutputRes(int [] mas, int operation, int [] requestNum)
 }
 
 Console.WriteLine("Hello!");
-int numberOfTask = Greeting();
+int numberOfTask = Greeting();//Запрос выбора желаемой задачи
 
-while(numberOfTask != 0)
+while(numberOfTask != 0)//Цикл работы программы
 {
-    int [] requestNum = RequestNumber(numberOfTask);
-    if(numberOfTask == 25)
+    int [] requestNum = RequestNumber(numberOfTask);//Запрос чисел согласно выбору желаемой задачи
+    if(numberOfTask == 25)//Решение задачи 25
         ConstructionCycle(requestNum);
     else
-        if(numberOfTask == 27)
+        if(numberOfTask == 27)//Решение задачи 27
             SearchSum(requestNum);
-        else
+        else//Решение задачи 29
         {
             Console.Write("Введите 1, чтобы заполнить массив случайыми числами, или 0, чтобы заполнить его самостоятельно: ");
-            int operation = Convert.ToInt32(Console.ReadLine());
-            int [] mas = FillingTheArray(requestNum, operation);
-            OutputRes(mas, operation, requestNum);
+            int operation = Convert.ToInt32(Console.ReadLine());//Выявление хода заполнения массива
+            int [] mas = FillingTheArray(requestNum, operation);//Заполнение массива
+            OutputRes(mas, operation, requestNum);//Вывод массива
         }
-    numberOfTask = Greeting();
+    numberOfTask = Greeting();//Повторный выбор хода программы
 }
 
 Console.WriteLine("Bye-Bye!");
