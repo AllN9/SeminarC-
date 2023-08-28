@@ -50,7 +50,7 @@ void OutputRes(int [] mas, int operation, int length)//Функция вывод
     }
     Console.WriteLine(mas[length - 1] + "]");
 }
-void QuantitySearch(int [] mas, int length)
+void QuantitySearch(int [] mas, int length)//функция поиска количества отрицательных чисел
 {
     int quantity = 0;
     for(int i = 0; i < length; i++)
@@ -70,9 +70,38 @@ QuantitySearch(mas, length);//Подсчет колличества отрица
 */
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых,
 //заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-
-
-
+/*
+double[] Greeting()//функция запроса чисел для работы программы
+{
+    Console.WriteLine("Две прямые задаются уравнениями y = k1 * x + b1 и y = k2 * x + b2.");
+    Console.Write("Задайти значения k1, k2, b1, b2: ");
+    double []mas = new double[4];
+    for(int i=0; i < 4; i++)//запрос коэфициентов
+        mas[i] = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Вы ввели числа: ");
+    for(int i=0; i < 3; i++)//вывод введенных данных
+        Console.Write(mas[i] + ", ");
+    Console.WriteLine(mas[3] + "");
+    Console.WriteLine("Полученные уравнения выглядят так:");
+    Console.WriteLine($"1) y = {mas[0]} * x + {mas[2]}");
+    Console.WriteLine($"2) y = {mas[1]} * x + {mas[3]}");
+    return mas;
+}
+void MatesSearch(double[] mas)
+{
+    double [] cord = new double[2];
+    if(mas[0] != mas[1])
+        {
+            cord[0] = (mas[3] - mas[2])/(mas[0] - mas[1]);
+            cord[1] = mas[0] * cord[0] + mas[2];
+            Console.WriteLine($"Координаты точки пересечения прямых: [{cord[0]}, {cord[1]}]");
+        }
+    else 
+        Console.WriteLine("У заданных прямых нет общих точек, а значит они параллельны");
+}
+double[] cord = Greeting();
+MatesSearch(cord);
+*/
 //Реализация выбора желаемой задачи
 /*
 
