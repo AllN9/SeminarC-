@@ -1,0 +1,15 @@
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.csproj.AssemblyReference.cache
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.AssemblyInfoInputs.cache
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.AssemblyInfo.cs
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.csproj.CoreCompileInputs.cache
+C:\Users\almar\Desktop\SeminarC#\Seminar8\bin\Debug\net6.0\Seminar8.exe
+C:\Users\almar\Desktop\SeminarC#\Seminar8\bin\Debug\net6.0\Seminar8.deps.json
+C:\Users\almar\Desktop\SeminarC#\Seminar8\bin\Debug\net6.0\Seminar8.runtimeconfig.json
+C:\Users\almar\Desktop\SeminarC#\Seminar8\bin\Debug\net6.0\Seminar8.dll
+C:\Users\almar\Desktop\SeminarC#\Seminar8\bin\Debug\net6.0\Seminar8.pdb
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.dll
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\refint\Seminar8.dll
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.pdb
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\Seminar8.genruntimeconfig.cache
+C:\Users\almar\Desktop\SeminarC#\Seminar8\obj\Debug\net6.0\ref\Seminar8.dll
